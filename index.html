@@ -261,6 +261,7 @@ dialog#case::backdrop{background:rgba(11,11,12,.72)}
 .chero canvas{position:absolute;inset:0;width:100%;height:100%}
 .chero img.full{max-width:100%;max-height:100%;width:100%;height:100%;object-fit:contain}
 .chero.maya{background:linear-gradient(#8DA3BF,#3A4658)}
+.pal{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}.pal span{font:600 12px var(--mono);padding:8px 10px;border:1px solid var(--line);color:#1a1a1a}
 .cfig{margin:16px 0 0}
 .cgal{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}
 .cgal img{width:100%;display:block;border:1px solid var(--line)}
@@ -522,6 +523,25 @@ footer .wrap{padding-block:28px;display:flex;justify-content:space-between;gap:1
             <dt>Rol</dt><dd>Modelado (proyecto individual)</dd>
           </dl>
           <div class="chips"><span>Modelado de personaje</span><span>Pose</span><span>Maya</span></div>
+        </div>
+      </article>
+
+      <article class="proj wide" data-cat="model">
+        <div class="media">
+          <video class="cover" src="media/tama-loop.mp4" poster="media/tama-hero.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Tamagotchi rosa translúcido girando 360 grados sobre su peana"></video>
+          <span class="tag">Turntable 360° · Blender</span>
+          <span class="cat">Rebranding 3D</span>
+        </div>
+        <div class="info">
+          <span class="status done">Terminado · 2.º curso</span>
+          <h3>Tamagotchi Rewind</h3>
+          <p>Rebranding en 3D del Tamagotchi de 1996: lo convertí en un coleccionable retro-futurista con carcasa rosa translúcida, detalles cromados y una mascota pixelada, sin perder el huevo, los tres botones y la mascota que todo el mundo recuerda.</p>
+          <dl class="spec">
+            <dt>Software</dt><dd>Blender · render en Cycles</dd>
+            <dt>Encargo</dt><dd>Rebrand in 3D (clase de Inglés)</dd>
+            <dt>Rol</dt><dd>Concepto, modelado, render y animación</dd>
+          </dl>
+          <div class="chips"><span>Modelado de producto</span><span>Materiales</span><span>Iluminación</span><span>Render Cycles</span></div>
         </div>
       </article>
 
@@ -916,6 +936,15 @@ var CASES=[
    ['Vistas','<div class="cgal"><img src="media/eyrun-34.jpg" alt="Eyrún vista en tres cuartos"><img src="media/eyrun-frente.jpg" alt="Eyrún vista de frente"><img src="media/eyrun-lado.jpg" alt="Eyrún vista de lado"><img src="media/eyrun-espalda.jpg" alt="Eyrún vista de espalda"></div>'],
    ['Topología','<figure class="cfig"><img src="media/eyrun-wire.jpg" alt="Eyrún con la malla en wireframe sobre el sombreado"><figcaption>Malla en wireframe sobre el modelo.</figcaption></figure>'],
    ['Lo que cambiaría hoy','<p>No quedó del todo fiel al concept: le faltan la capa con cuello de pelo y las runas del brazo, y las proporciones de la cara se pueden mejorar. Es un buen punto de partida para ver cómo he avanzado desde entonces.</p>']]},
+ {id:'tamagotchi',title:'Tamagotchi Rewind',cat:'Rebranding 3D',status:['done','Terminado · 2.º curso'],hero:{video:'media/tama-anim.mp4',poster:'media/tama-hero.jpg'},
+  intro:'Rebranding en 3D del Tamagotchi original: la misma mascota de 1996, convertida en un coleccionable retro-futurista.',
+  side:[['Categoría','Rebranding 3D'],['Curso','2.º · 2026'],['Software','Blender · Cycles'],['Rol','Concepto, modelado, render y animación'],['Encargo','Rebrand in 3D (Inglés)'],['Marca original','Tamagotchi · Bandai, 1996']],
+  blocks:[['El encargo','<p>Teníamos que elegir una marca conocida y rediseñar su identidad visual en 3D, como si fuéramos su nuevo director creativo. Elegí Tamagotchi porque me encanta el rollo retro: un huevo con tres botones y una pantalla pixelada que convertía cuidar de una mascota en un ritual diario.</p>'],
+   ['La idea','<p><b>Mantener el recuerdo y mejorar el objeto.</b> Conservé la silueta de huevo, los tres botones y la mascota pixelada para que se reconozca al instante, y le di un acabado premium: plástico rosa translúcido, cromados, pantalla que brilla y una peana de coleccionista. Pensado para adultos de 25 a 35 años que crecieron con él y para fans del estilo Y2K.</p><div class="pal"><span style="background:#F7A8C4">Rosa pastel</span><span style="background:#5CE1E6">Cian</span><span style="background:#B6F25C">Verde píxel</span><span style="background:#C9CED6">Cromo</span><span style="background:#2A1B3D;color:#fff">Morado</span></div>'],
+   ['Proceso en Blender','<p>Modelé la carcasa, los detalles, la pantalla con la mascota y el interior con circuitos visibles y la peana.</p><div class="cgal"><img src="media/tama-clay.jpg" alt="Modelo en gris visto en tres cuartos"><img src="media/tama-wire.jpg" alt="Modelo en wireframe"><img src="media/tama-piezas.jpg" alt="Piezas separadas por colores"><img src="media/tama-interior.jpg" alt="Interior con los circuitos visibles"></div>'],
+   ['Renders finales','<p>Renderizado en Cycles con luz de estudio suave y luces de borde rosa y cian.</p><div class="cgal"><img src="media/tama-hero.jpg" alt="Render principal del Tamagotchi sobre su peana"><img src="media/tama-frontal.jpg" alt="Render frontal"><img src="media/tama-pantalla.jpg" alt="Primer plano de la pantalla con la mascota pixelada"><img src="media/tama-trasera.jpg" alt="Parte trasera con el logo Tamagotchi Rewind"></div>'],
+   ['Qué cambié y qué mantuve',ul(['Cambié: colores, materiales e iluminación, una mascota en vóxeles, circuitos visibles y una peana de coleccionista','Mantuve: la forma de huevo, los tres botones, la mascota pixelada y el llavero'])],
+   ['Nota','<p>Proyecto de clase sin fines comerciales. Tamagotchi es una marca de Bandai.</p>']]},
  {id:'stopmotion',title:'Una Navidad Explosiva',cat:'Stop-motion',status:['done','Terminado · en grupo'],hero:{video:'media/stopmotion.mp4',poster:'media/stop-poster.jpg'},
   intro:'Corto navideño en stop-motion, con personajes de plastilina y escenarios nevados hechos a mano.',
   side:[['Categoría','Animación · Stop-motion'],['Duración','1:43'],['Mi papel','Supervisión creativa y producción ejecutiva'],['Equipo','Álvaro Mora, Álvaro Ruiz, Alberto, Ibai, David y Mathias']],
